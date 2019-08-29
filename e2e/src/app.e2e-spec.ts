@@ -1,5 +1,6 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, logging, ProtractorBrowser } from 'protractor';
+import { IBrowser } from 'selenium-webdriver';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -10,7 +11,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Angularcrud app is running!');
+    expect(page.getTitleText()).toEqual('Angularcrud');
   });
 
   afterEach(async () => {
